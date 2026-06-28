@@ -1,27 +1,104 @@
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/Futura Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Style the links inside the navigation bar */
+/* .topnav {
+  background-color: #fff;
+  overflow: hidden;
+} */
+
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  justify-content: center;
+}
+
 .topnav a {
+  color: #383838;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #383838;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
+} */
 
-/* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #eee;
   color: black;
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #ccc;
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #1a1a1a;
   color: white;
+}
+
+.hero {
+    height: 100vh;
+
+    background-image: url("2025-11-25-Fighting.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+.hero {
+    height: 100vh;
+
+    background-image: url("2025-11-25-Fighting.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    color: white;
+}
+
+.hero-header {
+    padding: 80px;
+}
+.hero-paragraph {
+    padding: 80px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    text-shadow: 0px 8px 0px  rgb(0 0 0 / 0.5);
+}
+
+.hero h2 {
+    font-size: 35px;
+    text-shadow: 0px 8px 0px  rgb(0 0 0 / 0.5);
+
+}
+
+.content {
+    min-height: 100vh;
+    padding: 60px;
+    text-align: center;
+    /* background: white; */
 }
