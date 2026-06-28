@@ -192,11 +192,32 @@ CONTENT
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 .audio-list {
     text-align: left;
     max-width: 900px;
     margin: auto;
-}.audio-row {
+}
+
+.track-name {
+    flex: 1;
+    min-width: 0;
+    font-size: 24px;
+}
+
+
+.audio-row {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -207,17 +228,11 @@ CONTENT
     background: #111;
     border-radius: 12px;
 
-    transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.track-name {
-    flex: 1;
-    min-width: 0;
-    font-size: 24px;
+    flex-wrap: wrap; /* add this */
 }
 
 .audio-row audio {
-    flex: 1;
+    flex: 1 1 100%; /* change this */
     width: 100%;
     min-width: 0;
 }
@@ -226,6 +241,8 @@ CONTENT
     transform: translateY(-4px);
     box-shadow: 0 8px 0px rgba(255, 255, 255, 0.25);
 }
+
+
 
 
 
