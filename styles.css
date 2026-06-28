@@ -196,32 +196,36 @@ CONTENT
     text-align: left;
     max-width: 900px;
     margin: auto;
-}
-
-.audio-row {
+}.audio-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
+
     padding: 20px;
     margin-bottom: 15px;
+
     background: #111;
     border-radius: 12px;
+
     transition: transform .2s ease, box-shadow .2s ease;
 }
+
+.track-name {
+    flex: 1;
+    min-width: 0;
+    font-size: 24px;
+}
+
+.audio-row audio {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+}
+
 .audio-row:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 0px rgba(255, 255, 255, 0.25);
 }
-
-.track-name {
-    font-size: 24px;
-    width: 40%;
-}
-
-.audio-row audio {
-    width: 50%;
-}
-
 
 
 
