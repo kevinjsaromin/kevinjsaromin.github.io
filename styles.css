@@ -399,7 +399,9 @@ SCREENPLAY
     overflow-x: auto;
     padding: 20px;
 
-    justify-content: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
 }
 
 .episode-grid button {
