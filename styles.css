@@ -13,8 +13,13 @@ PAGE WIDE STYLING
 }
 
 html {
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
   scroll-behavior: smooth;
   color: white;
+  /* background-color: #1a1a1a; */
+  background-color: white;
+
+  
 }
 
 h1 {
@@ -42,6 +47,25 @@ p {
     text-shadow: 0px 2px 0px  rgb(0 0 0 / 0.25);
 }
 
+body {
+    margin: 0;
+    /* background-color: #1a1a1a; */
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    /* background: #1a1a1a; */
+}
+
+section {
+    margin: 0px;
+    padding: 0px;
+    scroll-margin-top: 120px;
+    padding-bottom: 120px;
+
+}
+
 /*
 
 TOPBAR NAVIGATION
@@ -52,9 +76,14 @@ TOPBAR NAVIGATION
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    -webkit-sticky: sticky; /* harmless fallback */
+
     background-color: #fff;
     display: flex;
     justify-content: center;
+
+    transform: translateZ(0);
 }
 .topnav a {
     color: #333;
@@ -72,18 +101,14 @@ TOPBAR NAVIGATION
     transform: translateY(-2px);
 }
 
-.topnav a.active {
-  background-color: #ccc;
-}
-
 .top-gradient {
     position: fixed;
-    top: 55px; /* same height as your topbar */
+    top: 60px;
     left: 0;
     z-index: 0;
 
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 
     background: linear-gradient(
         to bottom,
@@ -93,17 +118,6 @@ TOPBAR NAVIGATION
 
     pointer-events: none;
     z-index: 999;
-}
-
-body {
-  margin: 0;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
-  background-color: #1a1a1a;
-}
-
-section {
-    scroll-margin-top: 120px;
-    padding-bottom: 120px;
 }
 
 /*
@@ -149,9 +163,9 @@ SOCIAL BAR
 HERO PAGE
 
 */
-
 .hero {
-    height: 100vh;
+    height: 100dvh;
+    min-height: -webkit-fill-available;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -180,11 +194,11 @@ HERO PAGE
 
 .hero-gradient {
     position: absolute;
-    inset: 0;
+    inset: -1px;
     background: linear-gradient(
         to bottom,
         transparent 0vh,
-        rgba(26, 26, 26, 1) 100vh
+        #1a1a1a 100vh
     );
     z-index: 2;
 }
@@ -228,7 +242,7 @@ HERO PAGE
 
 /*
 
-CONTENT
+GALLERY
 
 */
 
@@ -236,6 +250,8 @@ CONTENT
     min-height: 100vh;
     padding: 60px;
     text-align: center;
+    background: #1a1a1a;
+
 }
 
 .gallery {
@@ -244,11 +260,13 @@ CONTENT
     gap: 30px;
     max-width: 1400px;
     margin: auto;
+    align-items: start;
 }
+
 
 .card {
     margin: 10px;
-    padding: 4px;
+    padding: 48px;
     background: #111;
     border-radius: 12px;
     overflow: hidden;
@@ -273,16 +291,17 @@ CONTENT
 
 .card img,
 .card video {
+    box-sizing: border-box;
     padding: 4px;
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 
 .card h3,
 .card p {
-    padding: 0 20px;
+    padding: 0 8px;
 }
 
 
@@ -315,7 +334,7 @@ MUSIC
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 48px;
     margin-bottom: 15px;
     background: #111;
     border-radius: 12px;
@@ -378,7 +397,7 @@ SCREENPLAY
     gap: 15px;
 
     overflow-x: auto;
-    padding: 10px;
+    padding: 20px;
 
     justify-content: flex-start;
 }
@@ -423,18 +442,31 @@ SCREENPLAY
 
 
 
+/*
 
+VIEWER
+
+*/
 .viewer {
     visibility: hidden;
     opacity: 0;
+
     position: fixed;
     inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
     z-index: 9999;
-    background: rgba(0,0,0, .5);
+
+    background: rgba(0,0,0,.5);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+
+    padding: 0;
+
     transition:
         opacity .25s ease,
         visibility .25s ease;

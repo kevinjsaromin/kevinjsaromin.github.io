@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
+
+
   <head>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <body>
 
+    <!-- <div class="top-gradient"></div> -->
+
     <!-- TOPBAR NAVIGATION  -->
     <div class="topnav">
-      <div class="top-gradient"></div>
       <a href="#home">Home</a>
       <a href="#illustration">Visual Development</a>
       <a href="#animation">2D Collaborative</a>
@@ -16,19 +20,12 @@
       <a href="#screenplay">Screenplay</a>
     </div>
 
+    <!-- SOCIAL BAR  -->
     <div class="social-bar">
-      <a href="https://www.youtube.com/@truclair" target="_blank">
-          <i class="fa-brands fa-youtube"></i>
-      </a>
-
-      <a href="https://www.instagram.com/truclair.arts/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-      </a>
-
-      <a href="https://www.deviantart.com/truclair" target="_blank">
-          <i class="fa-brands fa-deviantart"></i>
-      </a>
-  </div>
+      <a href="https://www.youtube.com/@truclair" target="_blank"> <i class="fa-brands fa-youtube"></i> </a>
+      <a href="https://www.instagram.com/truclair.arts/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+      <a href="https://www.deviantart.com/truclair" target="_blank"> <i class="fa-brands fa-deviantart"></i> </a>
+    </div>
 
     <!-- HERO PAGE  -->
     <section id="home" class="hero">
@@ -65,12 +62,12 @@
 
         <div class="gallery">
 
-          <div class="card">
+          <!-- <div class="card">
             <img src="illustration/2024-05-24-Sunset-Louis.png" alt="Visual development">
             <img src="illustration/2024-05-24-Sunset.png" alt="Visual development">
             <h4>May 24, 2024</h4>
             <p>"Sunset Louis"</p>
-          </div>
+          </div> -->
 
           <div class="card">
             <img src="illustration/2025-05-09-Movies.png" alt="Visual development">
@@ -158,11 +155,11 @@
         <div class="gallery">
 
           <!-- PRE PRODUCTION -->
-          <div class="card">
+          <!-- <div class="card">
               <img src="animation/2024-01-15-Headless-Zombie-Brainstorm.png" alt="2D animation">
               <h4>January 15, 2024</h4>
               <p>Design brainstorm.</p>
-          </div>
+          </div> -->
           <div class="card">
               <img src="animation/2024-02-05-Headless-Zombie-Turnaround.png" alt="2D animation">
               <h4>February 5, 2024</h4>
@@ -183,11 +180,11 @@
               <h4>February 5, 2024</h4>
               <p>Acting reference for Scene 14.</p>
           </div>
-          <div class="card">
+          <!-- <div class="card">
               <img src="animation/2024-02-06-Scene-14-Colored.gif" alt="2D animation">
               <h4>February 6, 2024</h4>
               <p>Scene 14 first draft, director requested extending scene.</p>
-          </div>
+          </div> -->
           <div class="card">
               <img src="animation/2024-03-04-Scene-14-Colored-Extended.gif" alt="2D animation">
               <h4>March 4, 2024</h4>
@@ -371,9 +368,7 @@
       const viewerImage = document.getElementById("viewer-image");
 
       document.querySelectorAll(".card img").forEach(img => {
-
           img.addEventListener("click", () => {
-
               const preload = new Image();
 
               preload.onload = () => {
@@ -382,15 +377,15 @@
               };
 
               preload.src = img.src;
-
           });
-
       });
 
 
-      viewerImage.addEventListener("click", () => {
+      // click anywhere on the viewer background to close
+      viewer.addEventListener("click", () => {
           viewer.classList.remove("active");
       });
+
 
     </script>
 
