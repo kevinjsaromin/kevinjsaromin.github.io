@@ -157,24 +157,48 @@ SOCIAL BAR
 HERO PAGE
 
 */
-.hero {
-    height: 100dvh;
+
+/* .hero {
     min-height: -webkit-fill-available;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 120px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+} */
+.hero {
+    min-height: 100vh;
+    min-height: 100dvh;
 
+    position: relative;
+    overflow: visible;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* padding: 0 0 80px 0; */
 }
-
-.hero-video {
+/* .hero-video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+} */
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
     object-fit: cover;
     z-index: 0;
 }
@@ -186,7 +210,7 @@ HERO PAGE
     z-index: 1;
 }
 
-.hero-gradient {
+/* .hero-gradient {
     position: absolute;
     inset: -1px;
     background: linear-gradient(
@@ -195,22 +219,28 @@ HERO PAGE
         #1a1a1a 100vh
     );
     z-index: 2;
+} */
+.hero-gradient {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #1a1a1a 100%
+    );
+
+    z-index: 2;
 }
 
-.hero {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    padding: 0px;
-}
 
 .hero-content {
     position: relative;
     z-index: 3;
     max-width: 900px;
-    mask-image: linear-gradient(
+    padding: 40px 40px 40px 40px;
+
+    /* mask-image: linear-gradient(
         to bottom,
         black 84vh,
         transparent 92vh
@@ -219,7 +249,7 @@ HERO PAGE
         to bottom,
         black 84vh,
         transparent 92vh,
-    );
+    ); */
 }
 
 .hero-header {
@@ -252,7 +282,7 @@ GALLERY
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 30px;
-    max-width: 1400px;
+    max-width: 2400px;
     margin: auto;
     align-items: start;
 }
