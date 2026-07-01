@@ -282,7 +282,16 @@ GALLERY
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
-    max-width: 2400px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: start;
+}
+
+.gallery-condensed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 600px;
     margin: auto;
     align-items: start;
 }
@@ -292,15 +301,6 @@ GALLERY
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     max-width: 1200px;
-    margin: auto;
-    align-items: start;
-}
-
-.gallery-tiny {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-    max-width: 600px;
     margin: auto;
     align-items: start;
 }
@@ -377,7 +377,7 @@ MUSIC
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 24px;
+    padding: 16px;
     margin-bottom: 15px;
     background: #111;
     border-radius: 12px;
@@ -413,7 +413,7 @@ SCREENPLAY
 
 .episode-card {
     background: #111;
-    padding: 30px;
+    padding: 4px;
     border-radius: 16px;
 
     margin-bottom: 30px;
@@ -458,7 +458,7 @@ SCREENPLAY
 
 .pdf-card {
     background: #111;
-    padding: 20px;
+    padding: 8px;
     border-radius: 16px;
 
     overflow: hidden;
