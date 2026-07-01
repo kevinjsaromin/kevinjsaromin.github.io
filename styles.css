@@ -291,7 +291,16 @@ GALLERY
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-    max-width: 2400px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+
+.gallery-tiny {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 600px;
     margin: auto;
     align-items: start;
 }
@@ -299,7 +308,7 @@ GALLERY
 
 .card {
     margin: 10px;
-    padding: 48px;
+    padding: 12px;
     background: #111;
     border-radius: 12px;
     overflow: hidden;
@@ -328,6 +337,7 @@ GALLERY
     padding: 4px;
     width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
     border-radius: 12px;
 }
@@ -400,16 +410,6 @@ SCREENPLAY
     max-width: 900px;
     margin: auto;
 }
-
-
-.episode-card {
-    background: #111;
-    padding: 30px;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    transition: transform .2s ease, box-shadow .2s ease;
-}
-
 
 .episode-card {
     background: #111;
