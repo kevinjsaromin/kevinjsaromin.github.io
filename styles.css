@@ -226,8 +226,8 @@ HERO PAGE
 
     background: linear-gradient(
         to bottom,
-        transparent 0%,
-        #1a1a1a 100%
+        transparent 0vh,
+        #1a1a1a 100vh
     );
 
     z-index: 2;
